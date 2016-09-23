@@ -41,6 +41,8 @@ void loop()
   if (state == '0') {
     digitalWrite(ledPin, LOW);
     Serial.println("LED: off");
+    BTserial.println("LED: off");
+
     state = ' ';
 
   }
@@ -49,6 +51,7 @@ void loop()
   else if (state == '1') {
     digitalWrite(ledPin, HIGH);
     Serial.println("LED: on");
+    BTserial.println("LED: on");
     state = ' ';
   }
 
